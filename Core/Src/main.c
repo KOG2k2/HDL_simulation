@@ -21,10 +21,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "button.h"
-#include "software_timer.h"
+#include "global.h"
 #include "clock_auto.h"
-#include "clock_manual.h"
+//#include "clock_manual.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -92,7 +91,7 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim2);
-  setTimer1(10);
+  Setup();
   /* USER CODE END 2 */
 
   /* Infinite loop */

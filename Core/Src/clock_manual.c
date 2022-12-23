@@ -10,46 +10,19 @@
 void fsm_manual_run(){
 	if(mode == SEC_CHANGE){
 		switch(Stat_M2_1){
-		case 0:
-			Stat_M2_1 = 1;
+		case INIT:  //led blink 2Hz
+			Stat_M2_1 = BLINK;
 			setTimer2(10);
 			break;
-		case 1:
+		case BLINK:
 			if(timer2_flag == 1){
-				toggleNumberOnClock(SECOND_COUNT/5);
+				//clear_All_Clock();
+				toggleNumberOnClock(Second_count / 5);
 				setTimer2(50);
 			}
 			break;
 		default:
 			break;
 		}
-
-//
-//		switch(Stat_M2_3){
-//			case INIT:
-//				if(isButtonPressed(BUTTON2) == 1){
-//					Stat_M2_3 = INCREASE;
-//					//temp_RED++;
-//					AUTO_RED++;
-//				}
-//				break;
-//			case INCREASE:
-//				if(isButtonPressed(BUTTON2) == 1){
-//					//temp_RED++;
-//					AUTO_RED++;
-//					if(AUTO_RED > MAX_COUNT) AUTO_RED = MAX_COUNT;
-//				}
-//
-//				if(isButtonPressed(BUTTON3) == 1) Stat_M2_3 = SAVE;
-//				break;
-//			case SAVE:
-//				//AUTO_RED = temp_RED;
-//				mode = MODE1;
-//				Setup();
-//				break;
-//			default:
-//				break;
-//		}
-//		if(isButtonPressed(BUTTON1) == 1) mode = MODE3;
 	}
 }

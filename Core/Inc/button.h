@@ -12,8 +12,8 @@
 
 #define NUM_OF_BUTTON 3
 
-#define NORMAL_STATE RESET
-#define PRESSED_STATE SET
+#define NORMAL_STATE SET
+#define PRESSED_STATE RESET
 
 int isButtonPressed(int index);
 

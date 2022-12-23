@@ -11,7 +11,7 @@
 #include "global.h"
 
 void clear_All_Clock();
-void setAllClock();
+void toggleAllClock();
 void set_Number_on_Clock(int num);
 void toggleNumberOnClock(int num);
 

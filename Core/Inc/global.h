@@ -10,10 +10,8 @@
 
 #include "led_disp.h"
 #include "software_timer.h"
-#include "clock_auto.h"
 #include "main.h"
 #include "button.h"
-#include "clock_manual.h"
 
 /***********Clock Auto************/
 
@@ -28,11 +26,18 @@
 #define MIN_CHANGE 2
 #define HOUR_CHANGE 3
 
+#define INIT 0
+#define RUN 1
+
 extern int Second_count;
 extern int Minute_count;
 extern int Hour_count;
 
 extern int mode;
+
+extern int stat;
+
+void Setup();
 
 /***********Led Display************/
 
@@ -44,6 +49,8 @@ extern int leds[12];
 #define OFF SET
 
 /***********Clock Manual************/
+
+#define BLINK 1
 
 extern int Stat_M2_1;
 
