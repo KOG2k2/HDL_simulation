@@ -10,6 +10,13 @@
 /***********Clock Manual************/
 
 int Stat_M2_1 = INIT;
+int Stat_M2_2 = INIT;
+
+int Stat_M3_1 = INIT;
+int Stat_M3_2 = INIT;
+
+int Stat_M4_1 = INIT;
+int Stat_M4_2 = INIT;
 
 /***********Clock Auto************/
 int Second_count = 0;
@@ -20,6 +27,21 @@ int mode = 0;
 
 int stat = 0;
 
+void reInit(){
+	mode = NORMAL;
+	stat = INIT;
+
+	Stat_M2_1 = INIT;
+	Stat_M2_2 = INIT;
+
+	Stat_M3_1 = INIT;
+	Stat_M3_2 = INIT;
+
+	Stat_M4_1 = INIT;
+	Stat_M4_2 = INIT;
+
+}
+
 void Setup(){
 	Second_count = INITIAL_STATE;
 	Minute_count = INITIAL_STATE;
@@ -27,7 +49,10 @@ void Setup(){
 
 	mode = NORMAL;
 
+	stat = INIT;
+
 	Stat_M2_1 = INIT;
+	Stat_M2_2 = INIT;
 }
 
 /***********Led Display************/

@@ -23,7 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "global.h"
 #include "clock_auto.h"
-//#include "clock_manual.h"
+#include "clock_manual.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -98,8 +98,11 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  clock_auto_run();
-	  //fsm_manual_run();
+//	  clock_auto_run();
+//	  fsm_manual_run();
+	  set_Number_on_Clock(0);
+	  set_Number_on_Clock(1);
+	  set_Number_on_Clock(2);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

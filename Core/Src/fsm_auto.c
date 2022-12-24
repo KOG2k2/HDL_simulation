@@ -12,7 +12,7 @@ void clock_auto_run(){
 		switch(stat){
 		case INIT:
 			stat = RUN;
-			setTimer1(10);
+			setTimer1(1);
 			break;
 		case RUN:
 			if(timer1_flag == 1){
@@ -29,7 +29,6 @@ void clock_auto_run(){
 				if(Hour_count == HOUR_COUNT) Hour_count = INITIAL_STATE;
 
 				clear_All_Clock();
-				//set_Number_on_Clock(Second_count);
 				set_Number_on_Clock(Second_count/5);
 				set_Number_on_Clock(Minute_count/5);
 				set_Number_on_Clock(Hour_count);

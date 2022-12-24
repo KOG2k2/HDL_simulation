@@ -37,6 +37,7 @@ extern int mode;
 
 extern int stat;
 
+void reInit();
 void Setup();
 
 /***********Led Display************/
@@ -52,7 +53,17 @@ extern int leds[12];
 
 #define BLINK 1
 
+#define INCREASE 1
+#define DECREASE 2
+
 extern int Stat_M2_1;
+extern int Stat_M2_2;
+
+extern int Stat_M3_1;
+extern int Stat_M3_2;
+
+extern int Stat_M4_1;
+extern int Stat_M4_2;
 
 /***********Buttons************/
 #define BUTTON1 0
